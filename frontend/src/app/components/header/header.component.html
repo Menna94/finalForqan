@@ -1,0 +1,93 @@
+<nav>
+  <div class="nav-list">
+    <ul>
+      <li>
+        <a class="nav-link active" aria-current="page" routerLink="/">{{
+          "Home" | translate
+        }}</a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/sign-in">{{ "Login" | translate }}</a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/register">{{
+          "Register" | translate
+        }}</a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/recipients">{{
+          "Recipients" | translate
+        }}</a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/donors">{{ "Donors" | translate }}</a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/store">{{ "Store" | translate }}</a>
+      </li>
+      <li>
+        <a class="nav-link" (click)="changeLang()">
+          {{ currentLang === "en" ? ("Arabic" | translate) : "English" }}
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="mobile-screen">
+    <div class="burger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" [ngClass]="mobileMenuHideClass" *ngIf="mobileMenu">
+    <div class="close">
+      <i class="fas fa-times" (click)="toggleMenu()"></i>
+    </div>
+    <div class="mobile-nav-links">
+      <ul>
+        <li>
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/"
+            (click)="toggleMenu()"
+            >{{ "Home" | translate }}</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" routerLink="/sign-in" (click)="toggleMenu()">{{
+            "Login" | translate
+          }}</a>
+        </li>
+        <li>
+          <a class="nav-link" routerLink="/register" (click)="toggleMenu()">{{
+            "Register" | translate
+          }}</a>
+        </li>
+        <li>
+          <a class="nav-link" routerLink="/recipients" (click)="toggleMenu()">{{
+            "Recipients" | translate
+          }}</a>
+        </li>
+        <li>
+          <a class="nav-link" routerLink="/donors" (click)="toggleMenu()">{{
+            "Donors" | translate
+          }}</a>
+        </li>
+        <li>
+          <a class="nav-link" routerLink="/store" (click)="toggleMenu()">{{
+            "Store" | translate
+          }}</a>
+        </li>
+        <li>
+          <a class="nav-link" (click)="changeLang()">
+            {{ currentLang === "en" ? ("Arabic" | translate) : "English" }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="logo" class="f-center">
+    <a class="logo" routerLink="/">{{ "ForqanCharity" | translate }}</a>
+  </div>
+</nav>

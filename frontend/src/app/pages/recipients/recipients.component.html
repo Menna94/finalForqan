@@ -1,0 +1,68 @@
+<div class="full-height-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header f-between" (click)="openPopup()">
+            <h4 class="card-title">{{ "Recipients" | translate }}</h4>
+            <button class="outlined-btn fg-center">
+              <i class="fas fa-plus-circle"></i>
+              <span>
+                {{ "Add" | translate }}
+              </span>
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="text-primary">
+                  <th>{{ "FullName" | translate }}</th>
+                  <th>{{ "Identify" | translate }}</th>
+                  <th>{{ "PhoneNumber" | translate }}</th>
+                  <th>{{ "NumberOfSons" | translate }}</th>
+                  <th>{{ "Status" | translate }}</th>
+                  <th>{{ "Price" | translate }}</th>
+                  <!-- <th>{{ "Date" | translate }}</th> -->
+                  <th>{{ "Address" | translate }}</th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let recipient of recipients">
+                    <td>{{ recipient.recipientName }}</td>
+                    <td>{{ recipient.recipientNationalID }}</td>
+                    <td>{{ recipient.recipientPhone }}</td>
+                    <td>{{ recipient.recipientChildren }}</td>
+                    <td>
+                      {{ recipient.recipientMaritalStatus | translate }}
+                    </td>
+                    <td>{{ recipient.moneyRevieved }}</td>
+                    <!-- <td>{{ recipient.month }}</td> -->
+                    <td>
+                      {{ recipient.address.state }} -
+                      {{ recipient.address.city }}
+                    </td>
+                    <td>
+                      <div class="icons">
+                        <div class="delete-icon">
+                          <i
+                            class="fas fa-trash"
+                            (click)="deleteRecipientHandler(recipient._id)"
+                          ></i>
+                        </div>
+                        <div class="edit-icon">
+                          <i
+                            class="fas fa-edit"
+                            (click)="openEditPopup(recipient._id)"
+                          ></i>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

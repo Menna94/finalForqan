@@ -1,0 +1,53 @@
+<div class="full-height-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header f-between" (click)="openPopup()">
+            <h4 class="card-title">{{ "Donors" | translate }}</h4>
+            <button class="outlined-btn fg-center">
+              <i class="fas fa-plus-circle"></i>
+              <span>
+                {{ "Add" | translate }}
+              </span>
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="text-primary">
+                  <th>{{ "FullName" | translate }}</th>
+                  <th>{{ "Price" | translate }}</th>
+                  <th>{{ "Type" | translate }}</th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let donor of donors">
+                    <td>{{ donor.donerName }}</td>
+                    <td>{{ donor.moneyGiven }}</td>
+                    <td *ngFor="let type of donor.givenFor">{{ type }}</td>
+                    <td>
+                      <div class="icons">
+                        <div class="delete-icon">
+                          <i
+                            class="fas fa-trash"
+                            (click)="deleteRecipientHandler(donor._id)"
+                          ></i>
+                        </div>
+                        <div class="edit-icon">
+                          <i
+                            class="fas fa-edit"
+                            (click)="openEditPopup(donor._id)"
+                          ></i>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

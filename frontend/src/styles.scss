@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+html[dir="rtl"] {
+  nav {
+    .mobile-menu {
+      inset: 0 0 0 30% !important;
+    }
+  }
+}
+.full-height-center {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth-btn-container {
+  display: flex;
+  flex-direction: column;
+}
+.outlined-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 0.5rem 1.5rem;
+  // border: none;
+}
+.fg-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.f-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.f-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card {
+  border-radius: 12px;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  color: #252422;
+  margin-bottom: 20px;
+  position: relative;
+  border: 0 none;
+
+  .card-body {
+    padding: 15px 15px 10px 15px;
+
+    &.table-full-width {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .card-header {
+    padding: 15px;
+    border: 0;
+    background-color: #6c63ff;
+    color: white;
+    .card-title {
+      margin-top: 10px;
+    }
+  }
+
+  .map {
+    border-radius: 3px;
+
+    &.map-big {
+      height: 400px;
+    }
+  }
+
+  .image {
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+
+  .numbers {
+    font-size: 2em;
+  }
+
+  .big-title {
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 15px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #9a9a9a;
+  }
+
+  .card-footer {
+    background-color: transparent;
+    border: 0;
+
+    .stats {
+      i {
+        margin-right: 5px;
+        position: relative;
+        top: 0px;
+        color: #66615b;
+      }
+    }
+
+    .btn {
+      margin: 0;
+    }
+  }
+
+  &.card-plain {
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+
+    .card-body {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    img {
+      border-radius: 12px;
+    }
+  }
+}
+.icons {
+  display: flex;
+  gap: 0.5rem;
+}
+.edit-icon,
+.delete-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.delete-icon {
+  &:hover {
+    color: rgb(192, 72, 72);
+    transform: scale(1.2);
+  }
+}
+.edit-icon {
+  &:hover {
+    color: #6c63ff;
+    transform: scale(1.2);
+  }
+}

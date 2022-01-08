@@ -1,0 +1,63 @@
+<div class="recipient">
+  <form [formGroup]="donorForm" (ngSubmit)="addDonorHandler()">
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form3Example3">{{
+        "FullName" | translate
+      }}</label>
+      <input
+        type="text"
+        id="form3Example3"
+        class="form-control form-control-md"
+        [placeholder]="'FullName' | translate"
+        formControlName="donerName"
+      />
+    </div>
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form3Example3">{{
+        "Price" | translate
+      }}</label>
+      <input
+        type="text"
+        id="form3Example3"
+        class="form-control form-control-md"
+        [placeholder]="'Price' | translate"
+        formControlName="moneyGiven"
+      />
+    </div>
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form3Example3">{{
+        "Type" | translate
+      }}</label>
+      <input
+        type="text"
+        id="form3Example3"
+        class="form-control form-control-md"
+        [placeholder]="'Type' | translate"
+        formArrayName="givenFor"
+        formControlName="type"
+      />
+    </div>
+    <!-- <div class="form-outline mb-4">
+      <label class="form-label" for="form3Example3">{{
+        "Date" | translate
+      }}</label>
+      <input
+        type="date"
+        id="form3Example3"
+        class="form-control form-control-md"
+        [placeholder]="'Date' | translate"
+        formControlName=""
+      />
+    </div> -->
+
+    <div class="auth-btn-container">
+      <button
+        type="submit"
+        class="btn btn-primary btn-lg"
+        style="padding-left: 2.5rem; padding-right: 2.5rem"
+      >
+        {{ "Add" | translate }}
+      </button>
+    </div>
+  </form>
+</div>

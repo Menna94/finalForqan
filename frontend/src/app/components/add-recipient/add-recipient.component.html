@@ -1,0 +1,156 @@
+<div class="recipient">
+  <form [formGroup]="recipientForm" (ngSubmit)="addRecipientHandler()">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form3Example3">{{
+            "FullName" | translate
+          }}</label>
+          <input
+            type="text"
+            id="form3Example3"
+            class="form-control form-control-md"
+            [placeholder]="'FullName' | translate"
+            formControlName="recipientName"
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form3Example3">{{
+            "Identify" | translate
+          }}</label>
+          <input
+            type="text"
+            id="form3Example3"
+            class="form-control form-control-md"
+            [placeholder]="'Identify' | translate"
+            formControlName="recipientNationalID"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form3Example3">{{
+            "PhoneNumber" | translate
+          }}</label>
+          <input
+            type="text"
+            id="form3Example3"
+            class="form-control form-control-md"
+            [placeholder]="'PhoneNumber' | translate"
+            formControlName="recipientPhone"
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form3Example3">{{
+            "NumberOfSons" | translate
+          }}</label>
+          <input
+            type="text"
+            id="form3Example3"
+            class="form-control form-control-md"
+            [placeholder]="'NumberOfSons' | translate"
+            formControlName="recipientChildren"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form3Example3">{{
+            "Status" | translate
+          }}</label>
+          <select
+            formControlName="recipientMaritalStatus"
+            id="form3Example3"
+            class="form-control form-control-md"
+          >
+            <option value="" selected hidden>{{ "Select" | translate }}</option>
+            <option *ngFor="let item of status" [value]="item">
+              {{ item | translate }}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form3Example3">{{
+            "Price" | translate
+          }}</label>
+          <input
+            type="text"
+            id="form3Example3"
+            class="form-control form-control-md"
+            [placeholder]="'Price' | translate"
+            formControlName="moneyRevieved"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="form-outline mb-4">
+      <label class="form-label" for="form3Example3">{{
+        "Date" | translate
+      }}</label>
+      <input
+        type="text"
+        id="form3Example3"
+        class="form-control form-control-md"
+        [placeholder]="'Date' | translate"
+        formControlName="month"
+      />
+    </div> -->
+    <div class="row" formGroupName="address">
+      <div class="col-md-6">
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form3Example3">{{
+            "Street" | translate
+          }}</label>
+          <input
+            type="text"
+            id="form3Example3"
+            class="form-control form-control-md"
+            [placeholder]="'Street' | translate"
+            formControlName="street"
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form3Example3">{{
+            "City" | translate
+          }}</label>
+          <input
+            type="text"
+            id="form3Example3"
+            class="form-control form-control-md"
+            [placeholder]="'City' | translate"
+            formControlName="city"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row f-center">
+      <div class="col-md-4">
+        <div class="auth-btn-container">
+          <button
+            type="submit"
+            class="btn btn-primary btn-lg"
+            style="padding-left: 2.5rem; padding-right: 2.5rem"
+            [disabled]="recipientForm?.invalid"
+          >
+            {{ "Add" | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

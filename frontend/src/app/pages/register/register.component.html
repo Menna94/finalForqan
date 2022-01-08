@@ -1,0 +1,95 @@
+<section class="full-height-center register">
+  <div class="container h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="assets/img/login.png" class="img-fluid" alt="Sample image" />
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form>
+          <!-- Email input -->
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <div class="form-outline">
+                <label class="form-label" for="form3Example1">{{
+                  "FirstName" | translate
+                }}</label>
+                <input
+                  type="text"
+                  id="form3Example1"
+                  class="form-control form-control-md"
+                  [placeholder]="'FirstName' | translate"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-outline">
+                <label class="form-label" for="form3Example3">{{
+                  "LastName" | translate
+                }}</label>
+                <input
+                  type="email"
+                  id="form3Example3"
+                  class="form-control form-control-md"
+                  [placeholder]="'LastName' | translate"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example4">{{
+              "Email" | translate
+            }}</label>
+            <input
+              type="email"
+              id="form3Example4"
+              class="form-control form-control-md"
+              [placeholder]="'Email' | translate"
+            />
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <label class="form-label" for="form3Example5">{{
+              "Password" | translate
+            }}</label>
+            <input
+              type="password"
+              id="form3Example5"
+              class="form-control form-control-md"
+              [placeholder]="'Password' | translate"
+            />
+          </div>
+          <!-- confirm password input -->
+          <div class="form-outline mb-3">
+            <label class="form-label" for="form3Example6">{{
+              "ConfirmPassword" | translate
+            }}</label>
+            <input
+              type="password"
+              id="form3Example6"
+              class="form-control form-control-md"
+              [placeholder]="'ConfirmPassword' | translate"
+            />
+          </div>
+
+          <div class="auth-btn-container">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem"
+            >
+              {{ "Register" | translate }}
+            </button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">
+              {{ "HaveAccount" | translate }}?
+              <a routerLink="/sign-in" class="link-danger">{{
+                "Login" | translate
+              }}</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
