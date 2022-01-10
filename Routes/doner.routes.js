@@ -9,7 +9,7 @@ const {
     deleteDoner
 } = require('../Controllers/doner.controller');
 
-const Doner = require('../Controllers/doner.controller');
+const Doner = require('../Models/doner.model');
 const filter = require('../Middlewares/advancedFilters.middleware');
 
 
